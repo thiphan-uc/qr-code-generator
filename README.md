@@ -1,17 +1,42 @@
 # Biox Systems — QR Code Generator (CLI)
 
-Generate a QR code PNG from a URL.
+A lightweight Python app that generates a QR code from a URL.  
+Tested on **macOS** with Python 3 (installed via Homebrew).
+
+---
 
 ## Requirements
-- Python 3.9+ (Windows/macOS/Linux)
-- See `requirements.txt`
+- macOS with [Homebrew](https://brew.sh/) installed  
+- Python 3.10+ (`brew install python`)  
+- `qrcode` (installed via pip)
+
+---
 
 ## Setup
-```bash
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
 
+### 1. Clone the repo
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
+### 2. Create virtual environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+```bash
+pip install qrcode
+```
+or install from the manifest
+
+```bash
 pip install -r requirements.txt
+```
+
+### 4. Generate QR from URL
+```bash
+python3 app.py --url "https://www.bioxsystems.com/"
+```
